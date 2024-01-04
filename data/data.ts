@@ -18,7 +18,7 @@ export const companies = [
   {
     title: "Flikrify",
     alt: "Flikir image",
-    role: "Founding memeber, Backend Dev",
+    role: "Founding member, Backend Dev",
     skills: ["golang", "HaProxy", "Docker", "webSocket"],
     period: "2022- 2024",
     logo: '/assets/images/logos/flikr.png',
