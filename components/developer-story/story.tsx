@@ -8,7 +8,7 @@ import {
   HStack,
   Divider,
   IconButton,
-  Flex,
+
 } from '@chakra-ui/react'
 import { StoryTimeline } from './story-timeline'
 import { FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa'
