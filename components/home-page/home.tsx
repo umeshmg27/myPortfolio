@@ -3,21 +3,21 @@ import {
   Flex,
   Avatar,
   Box,
-  Text,
-  Badge,
-  Stack,
-  Link,
-  UnorderedList,
-  ListItem,
-  useColorModeValue
+  // Text,
+  // Badge,
+  // Stack,
+  // Link,
+  // UnorderedList,
+  // ListItem,
+  // useColorModeValue
 } from '@chakra-ui/react';
 import { MotionBox, MotionFlex } from 'components/shared/animations/motion';
 import Header from 'components/shared/header';
-import NextLink from 'next/link';
+// import NextLink from 'next/link';
 import { useLinkColor } from 'components/theme';
 // import PopularArticles from './PopularArticles';
 import { BlogPostProps } from 'interfaces/interface';
-import { newContent } from 'data/data';
+// import { newContent } from 'data/data';
 // import MyStory from 'components/developer-story/story';
 // import { companies, institutes } from 'data/data';
 // import Meta from 'components/shared/meta';
@@ -125,7 +125,7 @@ const Home: React.FC<BlogPostProps> = (props) => {
                   setShowEmoji(true);
                 }}
               >
-                Greetings!
+                Hey!
               </Header>
             </MotionBox>
           </Box>
