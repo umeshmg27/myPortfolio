@@ -52,7 +52,7 @@ const mobileLinks = [
 
 const dropdownLinks = [
   { name: 'Open Source', path: '/open-source' },
-  { name: 'Achievements', path: '/achievements' },
+  // { name: 'Achievements', path: '/achievements' },
   // { name: 'Changelog', path: '/changelog' },
 
 ];
