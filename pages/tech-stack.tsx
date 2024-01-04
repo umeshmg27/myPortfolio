@@ -34,13 +34,13 @@ const tabList = [
     icon: AiTwotoneThunderbolt
   },
   {
-    name: 'Web Development',
+    name: 'Development',
     filterName: 'development',
     icon: BiDesktop
   },
   {
-    name: 'Web Design',
-    filterName: 'design',
+    name: 'Database',
+    filterName: 'database',
     icon: GiSpiderWeb
   },
   {

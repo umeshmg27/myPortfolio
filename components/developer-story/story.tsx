@@ -8,6 +8,7 @@ import {
   HStack,
   Divider,
   IconButton,
+  Flex,
 } from '@chakra-ui/react'
 import { StoryTimeline } from './story-timeline'
 import { FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa'
@@ -18,21 +19,24 @@ import { PageSlideFade } from '../shared/animations/page-transitions'
 
 const MyStory = ({ companies, institutes }) => {
   return (
+    
     <VStack>
       <Section mb={14}>
         <PageSlideFade>
           <VStack>
             <Header mt={0} mb={1}>
-              Developer Story
+              Developer Jouney
             </Header>
           </VStack>
         </PageSlideFade>
       </Section>
-      <VStack textAlign="start" align="flex-start" mb={0}>
+     
+      <VStack textAlign="start" align="flex"  mb={0} >
         <Box>
-          <StoryTimeline year={'2021'} index={0} />
+          <StoryTimeline year={'2024'} index={0} />
           {companies.map((company, index) => (
-            <StoryTimeline icon={BsFillBriefcaseFill} index={index} key={index}>
+            <>
+            <StoryTimeline icon={BsFillBriefcaseFill} index={index > 0 ? index + 1 : index} key={index}>
               {' '}
               <HStack>
                 <Image
@@ -58,8 +62,48 @@ const MyStory = ({ companies, institutes }) => {
               <Divider my={2} />
               <Text fontSize={[12, 13, 15]}>{company.role}</Text>
             </StoryTimeline>
+            {company.awards &&
+              company.awards.map((award, index1) => (
+                <StoryTimeline
+                  icon={FaAward}
+                  index={index1 + index1 + 1}
+                  key={index1}
+                >
+                  {' '}
+                  {' '}
+                  <HStack>
+                    <IconButton
+                      colorScheme="blue"
+                      rounded="full"
+                      size="sm"
+                      aria-label="medal"
+                      icon={<FaMedal />}
+                    />
+
+                    <VStack align="start">
+                      <Heading
+                        fontSize={[12, 13, 15]}
+                        lineHeight="shorter"
+                        fontWeight="bold"
+                      >
+                        <Box>{award.title}</Box>
+                        <Box mt={1}>{award.date}</Box>
+                      </Heading>
+                    </VStack>
+                  </HStack>
+                  <Divider my={2} />
+                  <Text fontSize={[12, 13, 15]}>{award.description}</Text>
+                </StoryTimeline>
+              ))}
+              {/* <StoryTimeline
+                year={company.startingYear}
+                index={0}
+                skipTrail={index === company.length - 1 ? true : false}
+              /> */}
+              </>
+             
           ))}
-          <StoryTimeline year={'2017'} index={0} />
+          <StoryTimeline year={'2021'} index={0} />
           {institutes.map((institute, index) => (
             <>
               <StoryTimeline
@@ -133,7 +177,9 @@ const MyStory = ({ companies, institutes }) => {
           ))}
         </Box>
       </VStack>
+    
     </VStack>
+
   )
 }
 

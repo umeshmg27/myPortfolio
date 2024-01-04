@@ -7,11 +7,11 @@ description: "I have been writing on dev.to for more than 1 year. I really like 
 cover_image: '/assets/images/posts/create-blog/cover.png'
 ---
 
-I have been writing on [dev.to](https://dev.to) for more than 1 year. I really like to write articles on dev.to but now I wanted to write posts on my [portfolio website](https://my-portfolio-ma-ahmad.vercel.app). So I created a blog where I'll be writing new articles and showing my dev.to posts.
+I have been writing on [dev.to](https://dev.to) for more than 1 year. I really like to write articles on dev.to but now I wanted to write posts on my [portfolio website](https://my-portfolio-ma-Umesh .vercel.app). So I created a blog where I'll be writing new articles and showing my dev.to posts.
 I'll guide you how you can create similar blog for your Next.js website.<br/>
 
-**Live demo:** [blogs-list](https://my-portfolio-ma-ahmad.vercel.app/blog) <br/>
-**Github repo:** [https://github.com/MA-Ahmad/myPortfolio](https://github.com/MA-Ahmad/myPortfolio)
+**Live demo:** [blogs-list](https://my-portfolio-ma-Umesh .vercel.app/blog) <br/>
+**Github repo:** [https://github.com/MA-Umesh /myPortfolio](https://github.com/MA-Umesh /myPortfolio)
 
 ## 1. Install all these packages
 * Syntax highlighting - [prismjs](https://www.npmjs.com/package/prismjs)
@@ -21,14 +21,14 @@ I'll guide you how you can create similar blog for your Next.js website.<br/>
 * Serialize Markdown as HTML - [remark-html](https://www.npmjs.com/package/remark-html)
 
 ## 2. Create a mdx file
-See mdx file sample here [mdx-file](https://github.com/MA-Ahmad/myPortfolio/blob/main/data/posts/how-to-create-a-blog-for-your-nextjs-portfolio-website.mdx)
+See mdx file sample here [mdx-file](https://github.com/MA-Umesh /myPortfolio/blob/main/data/posts/how-to-create-a-blog-for-your-nextjs-portfolio-website.mdx)
 
-## 3. Create a [Blog](https://github.com/MA-Ahmad/myPortfolio/blob/main/pages/blog.tsx) page
+## 3. Create a [Blog](https://github.com/MA-Umesh /myPortfolio/blob/main/pages/blog.tsx) page
 Show all local and dev.to posts.
 
 ```ts
 const getPosts = async () => {
-  const res = await fetch("https://dev.to/api/articles?username=m_ahmad");
+  const res = await fetch("https://dev.to/api/articles?username=m_Umesh ");
   const posts = await res.json();
 
   return posts;
@@ -76,7 +76,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 ```
 
-## 4. Create a [blog detail](https://github.com/MA-Ahmad/myPortfolio/blob/main/pages/blog/%5Bslug%5D.tsx) page
+## 4. Create a [blog detail](https://github.com/MA-Umesh /myPortfolio/blob/main/pages/blog/%5Bslug%5D.tsx) page
 
 * Get paths of all blog posts
 ```ts
@@ -103,7 +103,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const getAllBlogs = async () => {
-  const res = await fetch("https://dev.to/api/articles?username=m_ahmad");
+  const res = await fetch("https://dev.to/api/articles?username=m_Umesh ");
 
   if (res.status < 200 || res.status >= 300) {
     throw new Error(
@@ -168,7 +168,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 ```
 
-## 5. Create a [custom stylesheet](https://github.com/MA-Ahmad/myPortfolio/blob/main/components/ui/prism.tsx) to handle dark and light theme 
+## 5. Create a [custom stylesheet](https://github.com/MA-Umesh /myPortfolio/blob/main/components/ui/prism.tsx) to handle dark and light theme 
 
 ## Blog Image
 ![blog](/assets/images/posts/create-blog/blog.png)

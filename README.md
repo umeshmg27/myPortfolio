@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><a href="https://mahmad.me" target="_blank">Mahmad.me</a></h1>
+  <h1><a href="https://mUmesh .me" target="_blank">MUmesh .me</a></h1>
   My personal portfolio website to show my skills, experience, and articles I published
 </div>
 
@@ -35,7 +35,7 @@
 ## Running Locally
 
 ```sh
-git clone https://github.com/MA-Ahmad/myPortfolio
+git clone https://github.com/MA-Umesh /myPortfolio
 cd myPortfolio && yarn install
 yarn dev
 ```

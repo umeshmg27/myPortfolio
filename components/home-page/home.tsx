@@ -18,6 +18,10 @@ import { useLinkColor } from 'components/theme';
 import PopularArticles from './PopularArticles';
 import { BlogPostProps } from 'interfaces/interface';
 import { newContent } from 'data/data';
+import MyStory from 'components/developer-story/story';
+import { companies, institutes } from 'data/data';
+import Meta from 'components/shared/meta';
+import Index from 'pages/developer-story';
 
 const ANIMATION_DURATION = 0.5;
 const ORANGE = '#ff9400';
@@ -38,6 +42,7 @@ const Home: React.FC<BlogPostProps> = (props) => {
 
   return (
     <Flex direction="column" align="center">
+      
       <Flex direction={['column', 'column', 'row']}>
         <MotionBox
           opacity="0"
@@ -120,14 +125,14 @@ const Home: React.FC<BlogPostProps> = (props) => {
                   setShowEmoji(true);
                 }}
               >
-                Hey!
+                Greetings!
               </Header>
             </MotionBox>
           </Box>
-          <Box as="h2" fontSize="2xl" fontWeight="400" textAlign="left">
+          {/* <Box as="h2" fontSize="2xl" fontWeight="400" textAlign="left">
             My name is{' '}
             <Box as="strong" fontWeight="600">
-              Ahmad
+              Umesh 
             </Box>{' '}
             and I&apos;m a{' '}
             <Box as="span" whiteSpace="nowrap">
@@ -138,12 +143,15 @@ const Home: React.FC<BlogPostProps> = (props) => {
             </Box>
             from{' '}
             <Box as="span" whiteSpace="nowrap">
-              Pakistan 🇵🇰
+              India
             </Box>
+          </Box> */}
+          <Box as="h4" fontSize="1xl" fontWeight="400" mt={5} textAlign="left">
+          I'm Umesh, a dedicated Full Stack Developer and open source enthusiast.
           </Box>
-          <Box as="h2" fontSize="2xl" fontWeight="400" mt={5} textAlign="left">
-            This is my digital garden, where I write about the things I&apos;m working on and share
-            what I&apos;ve learned. 😊
+          <Box as="h4" fontSize="1xl" fontWeight="400" mt={5} textAlign="left">
+          In this digital space, I document my tech endeavors and impart lessons learned. 
+          Dive into my world of innovative coding and continuous learning.
           </Box>
         </MotionFlex>
       </Flex>
@@ -165,11 +173,20 @@ const Home: React.FC<BlogPostProps> = (props) => {
         zIndex={1}
       >
         <Box mt={10}>
-          <ContentBox linkColor={linkColor} />
-          <PopularArticles posts={posts} />
+          {/* <ContentBox linkColor={linkColor} /> */}
+          {/* <PopularArticles posts={posts} /> */}
+          {/* <Index companies={companies} institutes={institutes} /> */}
+     
+      
+   
+        </Box>
+        <Box mt={10} >
+        
         </Box>
       </MotionBox>
+      
     </Flex>
+    
   );
 };
 
